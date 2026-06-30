@@ -15,12 +15,13 @@ Title: ${title}
 Description: ${description}`;
     const result = await model.generateContent(prompt);
     const text = result.response.text().replace(/```json|```/g, '').trim();
+    console.log('GEMINI RAW RESPONSE:', text);
     return JSON.parse(text);
-  } catch {
+  } catch (err) {
+    console.log('GEMINI ERROR:', err.message);
     return { category: 'other', summary: description.substring(0, 100) };
   }
 }
-
 router.get('/', async (req, res) => {
   try {
     const { status, category } = req.query;
