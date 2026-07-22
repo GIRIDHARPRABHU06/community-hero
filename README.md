@@ -180,4 +180,4 @@ https://linkedin.com/in/giridhar-prabhu-46750031b
 
 ## 📜 License
 
-This project was built for educational and portfolio purposes during the **Vibe2Ship Hackathon**. :contentReference[oaicite:1]{index=1}
+This project was built for educational and portfolio purposes during the **Vibe2Ship Hackathon**.
