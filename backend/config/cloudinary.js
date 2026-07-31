@@ -10,7 +10,17 @@ cloudinary.config({
 
 const storage = new CloudinaryStorage({
   cloudinary,
-  params: { folder: 'community-hero', allowed_formats: ['jpg', 'jpeg', 'png', 'mp4'] },
+  params: { 
+    folder: 'community-hero', 
+    allowed_formats: ['jpg', 'jpeg', 'png', 'mp4'],
+    resource_type: 'auto',
+  },
 });
 
-module.exports = { cloudinary, upload: multer({ storage }) };
+module.exports = { 
+  cloudinary, 
+  upload: multer({ 
+    storage,
+    limits: { fileSize: 10 * 1024 * 1024 }
+  }) 
+};
