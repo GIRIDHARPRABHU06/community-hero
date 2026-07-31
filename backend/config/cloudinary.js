@@ -12,7 +12,7 @@ const storage = new CloudinaryStorage({
   cloudinary,
   params: { 
     folder: 'community-hero', 
-    allowed_formats: ['jpg', 'jpeg', 'png', 'mp4'],
+    allowed_formats: ['jpg', 'jpeg', 'png', 'mp4', 'webp'],
     resource_type: 'auto',
   },
 });
